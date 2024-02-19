@@ -1,6 +1,7 @@
 const sqlc = require("./modules/sqlCommands");
 const inquirer = require("inquirer");
 
+// The menu options for the user to choose from.
 const menuOptions = [
   {
     type: "list",
@@ -14,11 +15,13 @@ const menuOptions = [
       "Add a Role",
       "Add an Employee",
       "Update an Employee Role",
+      "Exit",
     ],
   },
 ];
 
-function displayMenu () {
+// function to display the menu and handle the user's choice on the command-line.
+function displayMenu() {
   inquirer.prompt(menuOptions).then((answers) => {
     switch (answers.menu) {
       case "View All Departments":
@@ -42,8 +45,11 @@ function displayMenu () {
       case "Update an Employee Role":
         sqlc.updateEmployeeRole(displayMenu);
         break;
+      case "Exit":
+        process.exit(0);
     }
-})};
+  });
+}
 
 // Start the application
 displayMenu();
