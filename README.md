@@ -1,7 +1,9 @@
 # Employee Tracker
   
+  ![overview-sc.png](./overview-sc.png)
   ## Description
   Employee tracker is a easy-to-use CLI tool, that stores information about your employees in a MySQL database.
+  [Link to demo video](https://youtu.be/LdrJFA6j0gk)
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
