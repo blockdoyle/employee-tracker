@@ -166,16 +166,6 @@ function updateEmployeeRole (callback) {
     });
 }
 
-function exitServer () {
-    db.end(err => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log('MySQL connection closed');
-        }
-    });
-}
-
 module.exports = {
     viewAllDepartments,
     viewAllRoles,
